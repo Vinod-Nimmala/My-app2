@@ -1,5 +1,5 @@
-
-<!-- label for Searching using names  -->
+<div class="Sorting-class">
+    <!-- label for Searching using names  -->
 <input type="text" placeholder="Search Here"  (keypress)="getFilteredUsers()"  [(ngModel)]="term">
 
 <!-- Sorting code  -->
@@ -28,6 +28,8 @@
         <option>5</option>
    </select>
    <button class="page-button" (click)="page()">Page</button>
+</div>
+
 
 
 <!-- table To get/ show the API data in browser -->
@@ -50,7 +52,7 @@
             <td>{{user.name}}</td>
             <td>{{user.phone}}</td>
             <td>{{user.city}}</td>
-            <td>{{user.fee}}</td>
+            <td>{{user.fee | price}}</td>
             <td>
                 <img src="{{user.image}}" alt="">
             </td>

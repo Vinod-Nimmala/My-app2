@@ -26,6 +26,7 @@ import { CreateVehiclesComponent } from './create-vehicles/create-vehicles.compo
 import { CreateAccountComponent } from './create-account/create-account.component';
 import { UserFormComponent } from './user-form/user-form.component';
 import { StudentFormComponent } from './student-form/student-form.component';
+import { PricePipe } from './price.pipe';
 
 @NgModule({
   declarations: [
@@ -51,7 +52,8 @@ import { StudentFormComponent } from './student-form/student-form.component';
     CreateVehiclesComponent,
     CreateAccountComponent,
     UserFormComponent,
-    StudentFormComponent
+    StudentFormComponent,
+    PricePipe
   ],
   imports: [
     BrowserModule,
