@@ -1,0 +1,65 @@
+
+<!-- label for Searching using names  -->
+<input type="text" placeholder="Search Here"  (keypress)="getFilteredUsers()"  [(ngModel)]="term">
+
+<!-- Sorting code  -->
+<label for="">Column:</label>
+<select class="Sorting-select-options" [(ngModel)]="column">
+    <option value="fee">Fee</option>
+    <option value="name">Name</option>
+</select>
+
+ <label for="">Order</label>
+
+ <select class="Sorting-select-options" [(ngModel)]="order">
+    <option value="asc">assending</option>
+    <option value="desc">descending</option>
+</select>
+<button class="sort-button" (click)="sort()">Sort</button>
+<br>
+
+<!-- Code for Pagination -->
+    <label for="">PageNo:</label>
+   <select class="Sorting-select-options" [(ngModel)]="pageno">
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+   </select>
+   <button class="page-button" (click)="page()">Page</button>
+
+
+<!-- table To get/ show the API data in browser -->
+<table class="table" border="1">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Phone</th>
+            <th>City</th>
+            <th>Fee</th>
+            <th>Image</th>
+            <th>Actions</th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let user of users">
+            <td>{{user.id}}</td>
+            <td>{{user.name}}</td>
+            <td>{{user.phone}}</td>
+            <td>{{user.city}}</td>
+            <td>{{user.fee}}</td>
+            <td>
+                <img src="{{user.image}}" alt="">
+            </td>
+            <td>
+                <button class="button-Delete" (click)="delete(user.id)" >Delete</button>
+            </td>
+ 
+
+        </tr>
+    </tbody>
+
+</table>

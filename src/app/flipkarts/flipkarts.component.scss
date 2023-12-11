@@ -1,0 +1,59 @@
+*{
+    background-color: white !important;
+}
+.flipkart-products{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 30px;
+}
+.flipkart-products-main-items{
+    display: block;
+    height: 50%;
+    width: 200px;
+    border: 10px solid white;
+}
+.flipkart-products-top{
+    height: 55%;
+    width: 100%;
+}
+.flipkart-products-bottom{
+    height: 45%;
+    width: 100%;
+}
+h3{
+    font-family: Roboto,Arial,sans-serif;
+    font-weight: 600;
+}
+h6{
+    text-transform: capitalize;
+    color: gray;
+    font-family: Roboto,Arial,sans-serif;
+    font-weight: 100;
+}
+span{
+    background-color: green !important;
+    border-radius: 4px;
+    color: white;
+    font-size: smaller;
+    padding: 2px;
+}
+samp{
+    color: gray;
+    padding: 2px;
+}
+h1{
+    padding: 8px;
+    background-color: #2874f0 !important;
+    color: white !important;
+}
+
+h5{
+    font-family: Roboto,Arial,sans-serif;
+    font-weight: 700;
+    color: black;
+}
+.checked {
+    font-size: 10px;
+    // margin-right: 2px;
+    color:whitesmoke !important;
+}

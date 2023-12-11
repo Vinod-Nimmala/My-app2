@@ -1,0 +1,38 @@
+
+<div class="userForm">
+    <h1>Create User</h1>
+    <form [formGroup]="userForm">
+       <label for="">Name:</label>
+       <input type="text" formControlName="name">
+       <!-- Form validators for inputs -->
+       <div *ngIf="userForm.get('name')?.touched || userForm.get('name')?.dirty">
+        <p *ngIf="userForm.get('name')?.errors?.['required']">Name is required</p>
+        <p *ngIf="userForm.get('name')?.errors?.['minlength']">Minimun 5 characters required</p>
+        <p *ngIf="userForm.get('name')?.errors?.['maxlength']">Maximum 15 characters required</p>
+       </div>
+       <br>                
+       <label for="">Phone:</label>
+       <input type="number" formControlName="phone">
+       <div *ngIf="userForm.get('phone')?.touched || userForm.get('phone')?.dirty">
+        <p *ngIf="userForm.get('phone')?.errors?.['required']">Phone number is required</p>
+        <p *ngIf="userForm.get('phone')?.errors?.['min']">Min 10 digits required</p>
+        <p *ngIf="userForm.get('phone')?.errors?.['max']">Maximum 10 digits</p>
+       </div>
+        <br>     
+       <label for="">City:</label>
+       <input type="text" formControlName="city">
+       <div *ngIf="userForm.get('city')?.touched || userForm.get('city')?.dirty">
+        <p *ngIf="userForm.get('city')?.errors?.['required']">City name is required </p>
+
+       </div>
+        <br>      
+       <label for="">Image:</label>
+       <input type="text" formControlName="image">  
+       <div *ngIf="userForm.get('image')?. touched || userForm.get('image')?.dirty">
+        <p *ngIf="userForm.get('image')?.errors?.['required']">Image is required</p>
+       </div>
+       <br>
+       <button (click)="Submit()">Submit</button>
+    </form>
+</div>
+

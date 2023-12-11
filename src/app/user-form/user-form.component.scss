@@ -1,0 +1,43 @@
+label{
+    display: inline-block;
+    width: 100px;
+    margin-bottom: 20px;
+}
+p{
+    color: red;
+}
+.parent{
+    background-color: aqua;
+    width: 40%;
+    height: auto;
+    margin: 50px;
+    margin-left: 100px !important; 
+    padding: 50px; 
+    padding-left: 150px !important;
+    border-radius: 20px;
+    box-shadow: 10px 10px 5px black;
+    
+}
+.submit-button{
+    background-color: whitesmoke;
+    border-radius: 30px;
+    margin-left: 150px;
+    width: 100px;
+}
+.submit-button:hover{
+    cursor: pointer;
+    background-color: brown;
+    color: whitesmoke;
+}
+.AddCardsButton{
+    background-color: whitesmoke;
+    border-radius: 30px;
+    margin-left: 150px;
+    width: 100px;
+    margin-bottom: 10px;
+}
+.AddCardsButton:hover{
+    cursor: pointer;
+    background-color: brown;
+    color: whitesmoke;
+}

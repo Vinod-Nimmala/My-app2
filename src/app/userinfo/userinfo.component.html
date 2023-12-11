@@ -1,0 +1,70 @@
+
+<div class="main-division" *ngFor="let EveryUser of userdetails">
+    
+    <p>Image:<img src="{{EveryUser.image}}" alt=""></p>
+    <p>ID:{{EveryUser.id}}</p>
+    <p>FirstName:{{EveryUser.firstName}}</p>
+    <p>LastName:{{EveryUser.lastName}}</p>
+    <p>MiddleName:{{EveryUser.maidenName}}</p>
+    <p>Age:{{EveryUser.age}}</p>
+    <p>Gender:{{EveryUser.gender}}</p>
+    <p>Email:{{EveryUser.email}}</p>
+    <p>Phone:{{EveryUser.phone}}</p>
+    <p>UserName:{{EveryUser.username}}</p>
+    <p>Password:{{EveryUser.password}}</p>
+    <p>BirthDate:{{EveryUser.birthDate}}</p>
+    <p>BloodGroup:{{EveryUser.bloodGroup}}</p>
+    <p>EyeColor:{{EveryUser.eyeColor}}</p>
+    
+    <div>
+        <b>Hair</b>
+        <p>Color:{{EveryUser.hair.color}}</p>
+        <p>Type:{{EveryUser.hair.type}}</p>
+    </div>
+    <div class="domain-Section">
+        <p>Domain:{{EveryUser.domain}}</p>
+        <p>Ip-address:{{EveryUser.ip}}</p>       
+    </div>
+    <div class="Adrress-Section">
+        <p>Address:{{EveryUser.address.address}}</p>
+        <p>City:{{EveryUser.address.city}}</p>
+        <b>Coordinates:</b>
+        <p>Lattitude:{{EveryUser.address.coordinates.lat}}</p>
+        <p>Longittude:{{EveryUser.address.coordinates.lng}}</p>
+        <p>PostalCode:{{EveryUser.address.postalCode}}</p>
+        <p>State:{{EveryUser.address.state}}</p>
+        
+    </div>
+    <div class="Mac-Section">
+        <p>MacAddress:{{EveryUser.macAddress}}</p>
+        <p>University:{{EveryUser.university}}</p>
+        <div class="Bank-Section">
+            <b>Bank:</b>
+            <p>CardExpire:{{EveryUser.bank.cardExpire}}</p>
+            <p>CardNumber:{{EveryUser.bank.cardNumber}}</p>
+            <p>CardType:{{EveryUser.bank.cardtype}}</p>
+            <p>Currency:{{EveryUser.bank.currency}}</p>
+            <p>Iban:{{EveryUser.bank.iban}}</p>
+        </div>
+    </div>
+    <div class="Company-Details-Section">
+        <b>Company:</b>
+        <h4>Address:</h4>
+        <p>Address:{{EveryUser.company.address.address}}</p>
+        <p>City:{{EveryUser.company.address.city}}</p>
+        <div class="company-coordinates-section">
+            <b>Coordinates</b>
+            <p>Lattitude:{{EveryUser.company.address.coordinates.lat}}</p>
+            <p>Longittude:{{EveryUser.company.address.coordinates.lng}}</p>
+            <p>PostalCode:{{EveryUser.company.address.postalCode}}</p>
+            <p>State:{{EveryUser.company.address.state}}</p>
+            <p>Department:{{EveryUser.company.department}}</p>
+            <p>Name:{{EveryUser.company.name}}</p>
+            <p>Title:{{EveryUser.company.title}}</p>
+        </div>
+        <p>Ein:{{EveryUser.ein}}</p>
+        <p>SSN:{{EveryUser.ssn}}</p>
+        <p>UserAgent:{{EveryUser.userAgent}}</p>
+    </div>
+    
+</div>

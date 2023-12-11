@@ -1,0 +1,35 @@
+
+<h1 *ngFor="let name of names">{{name|uppercase}}</h1>
+<select>
+    <option *ngFor="let state of states">{{state}}</option>
+</select>
+
+<h2 *ngFor="let product of products">product name is  {{product.name}} and price is  {{product.price}}</h2>
+
+
+<table class="table table-dark">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Price</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let product of products">
+            <td>
+                {{product.name}}
+            </td>
+            <td>
+                {{product.price}}
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<h1 *ngIf="true">Hello</h1>
+
+<input type="number" [(ngModel)]="num">
+<h1 *ngIf="num<0">Negative number</h1>
+<h1 *ngIf="num>0">Positive number</h1>
+<h1 *ngIf="num==0">Zero</h1>
+<router-outlet></router-outlet>

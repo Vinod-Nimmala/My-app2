@@ -1,0 +1,18 @@
+.activity-division{
+ padding: 20px; 
+ margin: 50px;
+ background-color: aqua;
+ border-radius: 50px;
+}
+button{
+    background-color: blueviolet;
+    width: 60px;
+    border-radius: 20px;
+    color: whitesmoke;
+}
+button:hover{
+    cursor: pointer;
+    background-color: bisque;
+    width: 80px;
+    color: black;
+}

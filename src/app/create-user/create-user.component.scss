@@ -1,0 +1,30 @@
+.userForm{
+    width: 30%;
+    height: auto; 
+    margin: 100px;
+    background-color: aqua;
+    padding: 40px;
+    padding-left: 100px !important;
+    border-radius: 30px;
+    box-shadow: 5px 5px 10px black;
+}
+label{
+    display: inline-block;
+    width: 100px;
+    margin-bottom: 20px;
+}
+p{
+    color: brown;
+}
+button{
+    background-color: whitesmoke;
+    border-radius: 10px;
+    margin-left: 150px;
+    width: 100px;
+}
+button:hover{
+    cursor: pointer;
+    background-color: brown;
+    color: whitesmoke;
+    
+}

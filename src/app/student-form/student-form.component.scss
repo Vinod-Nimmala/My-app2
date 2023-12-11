@@ -1,0 +1,22 @@
+.Parent{
+    background-color: aqua;
+    width: 60%;
+    height: 100%;
+    margin: 50px;
+    margin-left: 100px !important; 
+    padding: 50px; 
+    padding-left: 150px !important;
+    border-radius: 20px;
+    box-shadow: 10px 10px 5px black;
+    overflow: auto;
+}
+
+
+label{
+    display: inline-block;
+    width: 100px;
+    margin-bottom: 20px;
+}
+p{
+    color: red;
+}

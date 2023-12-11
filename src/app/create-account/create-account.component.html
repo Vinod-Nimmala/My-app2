@@ -1,0 +1,38 @@
+<div class="creatingAccountform-Main">
+    <form [formGroup]="Accountform">
+        <h1>Create Account</h1>
+        <label>AccountName:</label>
+        <input type="text" formControlName="account_name">
+        <div *ngIf="Accountform.get('account_name')?.touched || Accountform.get('account_name')?.dirty">
+            <p *ngIf="Accountform.get('account_name')?.errors?.['required']">AccountName is required</p>
+        </div>
+        <br>
+        <label>AvailableBalance:</label>
+        <input type="text" formControlName="available_balance">
+        <div *ngIf="Accountform.get('available_balance')?.touched || Accountform.get('account_balance')?.dirty">
+            <p *ngIf="Accountform.get('available_balance')?.errors?.['required']">Enter available_balance</p>
+        </div>
+        <br>
+        <label>AccountNumber:</label>
+        <input type="text" formControlName="account_number">
+        <div *ngIf="Accountform.get('account_number')?.touched || Accountform.get('account_number')?.dirty">
+            <p *ngIf="Accountform.get('account_number')?.errors?.['required']">Enter AccountNumber</p>
+        </div>
+        <br>
+        <label for="">City:</label>
+        <input type="text" formControlName="city">
+        <div *ngIf="Accountform.get('city')?.touched || Accountform.get('city')?.dirty">
+            <p *ngIf="Accountform.get('city')?.errors?.['required']">CityName is required</p>
+
+        </div>
+        <br>
+        <label>ProfilePicture:</label>
+        <input type="text" formControlName="profile_picture">
+        <div *ngIf="Accountform.get('profile_picture')?.touched || Accountform.get('profile_picture')?.dirty">
+            <p *ngIf="Accountform.get('profile_picture')?.errors?.['required']">ProfilePicture is required</p>
+        </div>
+        <br>
+        <button class="submit-button" (click)="submit()">Submit</button>
+    </form>
+</div>
+

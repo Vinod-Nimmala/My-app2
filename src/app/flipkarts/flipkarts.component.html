@@ -1,0 +1,17 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<div class="flipkart-products">
+    <div class="flipkart-products-main-items" *ngFor="let item of flipkartitems">
+        <div class="flipkart-products-top">
+            <img src="{{item.image}}" alt="" width="100px" height="100px">
+        </div>
+        <div class="flipkart-products-bottom">
+            <h3>{{item.title}}</h3>
+            <h6>{{item.category}}</h6>
+            <span>{{item.rating.rate}}&nbsp;<span class="fa fa-star checked"></span> </span>&nbsp;<samp>({{item.rating.count}})</samp>
+            <h4>&#8377;{{item.price}}</h4>
+            <h5>Free delivery</h5>
+            
+        </div>
+    </div>
+</div>
+

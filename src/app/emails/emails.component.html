@@ -1,0 +1,14 @@
+<table>
+    <thead>
+        <th>S.No</th>
+        <th>Title</th>
+        
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of items">
+            <td [ngClass]="{'black':item.completed==true, 'gray':item.completed==false}">{{item.id}}</td>
+            <td [ngClass]="{'black':item.completed==true, 'gray':item.completed==false}">{{item.title}}</td>
+            
+        </tr>
+    </tbody>
+</table>

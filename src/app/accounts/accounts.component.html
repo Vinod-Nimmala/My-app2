@@ -1,0 +1,64 @@
+<!--  -->
+<input type="text" placeholder="search Here......" (keypress)="getFilteredAccounts()" [(ngModel)]="term">
+
+<!-- Sorting process -->
+<label for="">Column:</label>
+<select class="Sorting-select-options"  [(ngModel)]="column">
+    <option value="account_name">AccountName</option>
+    <option value="available_balance">AvailableBalance</option>
+</select>
+<label for="">Order:</label>
+<select class="Sorting-select-options"  [(ngModel)]="order">
+    <option value="asc">Assending</option>
+    <option value="desc">Desending</option>
+</select>
+<button class="sort-button" (click)="sort()">Sort</button>
+<br>
+<!-- pagination  -->
+<label for="">PageNo:</label>
+<select class="Sorting-select-options" [(ngModel)]="pageno">
+    <option>1</option>
+    <option>2</option>
+    <option>3</option>
+    <option>4</option>
+    <option>5</option>
+    <option>6</option>
+    <option>7</option>
+    <option>8</option>
+    <option>9</option>
+    <option>10</option>
+    <option>11</option>
+</select>
+ <button class="page-button" (click)="page()">Page</button>
+
+
+<table class="table" border="1" >
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Account_Name</th>
+            <th>Available_Balance</th>
+            <th>Account_Number</th>
+            <th>City</th>
+            <th>Profile_Picture</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let account of accounts">
+            <td>{{account.id}}</td>
+            <td>{{account.account_name}}</td>
+            <td>{{account.available_balance}}</td>
+            <td>{{account.account_number}}</td>
+            <td>{{account.city}}</td>
+            <td>
+                <img src="{{account.profie_picture}}" alt="">
+            </td>
+            <td>
+                <button class="button-Delete" (click)="delete(account.id)">Delete</button>
+            </td>
+        
+        </tr>
+    </tbody>
+
+   </table>

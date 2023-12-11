@@ -1,0 +1,50 @@
+<div class="CreatingVehicleForm">
+    <form [formGroup]="VehiclesForm">
+        <h1>Create Vehicle</h1>   
+        <!-- Form Validators for input formcontrols -->
+        <label for="">Vehicle:</label>
+        <input type="text" formControlName="Vehicle">
+        <div *ngIf="VehiclesForm.get('Vehicle')?.touched || VehiclesForm.get('Vehicle')?.dirty">
+            <p *ngIf="VehiclesForm.get('Vehicle')?.errors?.['required']">Vehicle Name is required</p>
+        </div>
+        <br>
+        <label for="">Manufacturer:</label>
+        <input type="text" formControlName="manufacturer"> 
+        <div *ngIf="VehiclesForm.get('manufacturer')?.touched || VehiclesForm.get('manufacturer')?.dirty">
+            <p *ngIf="VehiclesForm.get('manufacturer')?.errors?.['required']">Vehicle manufacturer name is required</p>
+        </div>
+        <br>
+        <label for="">Model:</label>
+        <input type="text" formControlName="model">
+        <div *ngIf="VehiclesForm.get('model')?.touched || VehiclesForm.get('model')?.dirty">
+            <p *ngIf="VehiclesForm.get('model')?.errors?.['required']">Model is required</p>
+        </div>
+        <br>
+        <label for="">Type:</label>
+        <input type="text" formControlName="type">
+        <div *ngIf="VehiclesForm.get('type')?.touched || VehiclesForm.get('type')?.dirty">
+            <p *ngIf="VehiclesForm.get('type')?.errors?.['required']">Vehicle type is required</p>
+        </div>
+        <br>
+        <label for="">Fuel-Type</label>
+        <input type="text" formControlName="fuel">
+        <div *ngIf="VehiclesForm.get('fuel')?.touched || VehiclesForm.get('fuel')?.dirty">
+            <p *ngIf="VehiclesForm.get('fuel')?.errors?.['required']">Vehicle fuel type is required</p>
+        </div>
+        <br>
+        <label for="">Color:</label>
+        <input type="text" formControlName="color">
+        <div *ngIf="VehiclesForm.get('color')?.touched || VehiclesForm.get('color')?.dirty">
+            <p *ngIf="VehiclesForm.get('color')?.errors?.['required']">Vehicle color is required</p>
+        </div>
+        <br>
+        <label for="">Image</label>
+        <input type="text" formControlName="image">
+        <div *ngIf="VehiclesForm.get('image')?.touched || VehiclesForm.get('image')?.dirty">
+            <p *ngIf="VehiclesForm.get('image')?.errors?.['required']">Upload the Vehicle image</p>
+        </div>
+        <br>
+        <button (click)="submit()" >Submit</button>
+
+    </form>
+</div>
