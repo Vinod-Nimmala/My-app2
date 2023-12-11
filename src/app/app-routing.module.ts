@@ -24,6 +24,7 @@ import { CreateAccountComponent } from './create-account/create-account.componen
 import { UserFormComponent } from './user-form/user-form.component';
 import { StudentFormComponent } from './student-form/student-form.component';
 import { AuthenticationGuard } from './authentication.guard';
+import { NotifyGuard } from './notify.guard';
 
 const routes: Routes = [
   //General routing path
@@ -47,11 +48,11 @@ const routes: Routes = [
       {path:'activity',component:ActivityComponent},
       {path:'memes',component:MemesComponent},
       {path:'userinfo',component:UserinfoComponent},
-      {path:'create-user',component:CreateUserComponent},
-      {path:'create-vehicles',component:CreateVehiclesComponent},
-      {path:'create-account',component:CreateAccountComponent},
-      {path:'user-form', component:UserFormComponent},
-      {path:'student-form', component:StudentFormComponent}
+      {path:'create-user', canDeactivate:[NotifyGuard], component:CreateUserComponent},
+      {path:'create-vehicles',canDeactivate:[NotifyGuard], component:CreateVehiclesComponent},
+      {path:'create-account',canDeactivate:[NotifyGuard], component:CreateAccountComponent},
+      {path:'user-form', canDeactivate:[NotifyGuard], component:UserFormComponent},
+      {path:'student-form',canDeactivate:[NotifyGuard], component:StudentFormComponent}
   ]},
 
   //Empty routing path 
