@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { AccountService } from '../account.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-accounts',
@@ -19,7 +20,7 @@ export class AccountsComponent {
  //Creating variable for pagination
  public pageno:number=0;
 
-  constructor(private _accountService:AccountService){
+  constructor(private _accountService:AccountService, private _router:Router){
     _accountService.getAccounts().subscribe(
       (data:any)=>{
         this.accounts =data;
@@ -76,5 +77,10 @@ export class AccountsComponent {
         alert("Internal server error");
       }
     )
+  }
+
+  //Method call for View button click
+  view(id:number){
+    this._router.navigateByUrl("/dashboard/account-details/"+id);
   }
 }

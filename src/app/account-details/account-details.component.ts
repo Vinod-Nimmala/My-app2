@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-account-details',
@@ -6,5 +7,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./account-details.component.scss']
 })
 export class AccountDetailsComponent {
-
+  constructor(private _activatedRoute:ActivatedRoute){
+    _activatedRoute.params.subscribe(
+      (data:any)=>{
+        console.log(data.id);
+      }
+    );
+  }
 }
