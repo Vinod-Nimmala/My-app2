@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { AccountService } from '../account.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-create-account',
@@ -18,11 +19,12 @@ export class CreateAccountComponent {
      profile_picture:new FormControl(null,[Validators.required])
    });
 
-   constructor(private _AccountService:AccountService){}
+   constructor(private _accountService:AccountService, private _activatedRoute:ActivatedRoute){
+   }
 
    //Submit function call to store the data in 
    submit(){
-      this._AccountService.createAccounts(this.Accountform.value).subscribe(
+      this._accountService.createAccounts(this.Accountform.value).subscribe(
         (data:any)=>{
           alert("Account created Successfully");
         },

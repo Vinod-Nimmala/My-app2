@@ -27,6 +27,7 @@ import { CreateAccountComponent } from './create-account/create-account.componen
 import { UserFormComponent } from './user-form/user-form.component';
 import { StudentFormComponent } from './student-form/student-form.component';
 import { PricePipe } from './price.pipe';
+import { UserDetailsComponent } from './user-details/user-details.component';
 
 @NgModule({
   declarations: [
@@ -53,7 +54,8 @@ import { PricePipe } from './price.pipe';
     CreateAccountComponent,
     UserFormComponent,
     StudentFormComponent,
-    PricePipe
+    PricePipe,
+    UserDetailsComponent
   ],
   imports: [
     BrowserModule,

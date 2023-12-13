@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { UserService } from '../user.service';
 import { ColdObservable } from 'rxjs/internal/testing/ColdObservable';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-users',
@@ -23,7 +24,7 @@ export class UsersComponent {
   //Creating variable for pagination 
   public  pageno:number=0;
 
-  constructor(private _userService:UserService){
+  constructor(private _userService:UserService, private _router:Router){
     
     // Code for getiing the API Data from service
     _userService.getUsers().subscribe(
@@ -84,5 +85,15 @@ export class UsersComponent {
         alert("Internal server error");
       }
     )
+  }
+
+  //Method call for View button
+  view(id:number){
+    this._router.navigateByUrl("/dashboard/user-details/"+id);
+  }
+
+  //Method call for edit button
+  edit(id:number){
+    this._router.navigateByUrl("/dashboard/edit-user/"+id);
   }
 }

@@ -11,9 +11,18 @@ export class UserService {
 
   constructor(private _httpClient:HttpClient) { }
   
+  //Get method to observe the all users from API
   getUsers():Observable<any>{
     return this._httpClient.get(this.baseUrl);
   }
+
+  //Get method to observe the only single user
+  getUser(i:number):Observable<any>{
+    return this._httpClient.get(this.baseUrl+"/"+i);
+  }
+
+
+  //Get method to observe the Filtered users
   getFilteredUsers(term:string):Observable<any>{
     return this._httpClient.get(this.baseUrl+"?filter="+term);
   }
@@ -33,5 +42,10 @@ export class UserService {
   //Post method to get the data from userforms and  storing it in API
   createUsers(data:any):Observable<any>{
     return this._httpClient.post(this.baseUrl+"/",data);
+  }
+
+  //Put method for Editted users 
+  editUser(id:any, data:any):Observable<any>{
+    return this._httpClient.put(this.baseUrl+"/"+id,data);
   }
 }

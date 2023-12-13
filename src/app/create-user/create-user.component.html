@@ -1,6 +1,9 @@
 
 <div class="userForm">
-    <h1>Create User</h1>
+
+    <!-- <h1 *ngIf="!id">Create User</h1>
+    <h1 *ngIf="id">Edit User</h1> -->
+    <h1>{{ id? 'Update User form' :'Create user form' }}</h1>
     <form [formGroup]="userForm">
        <label for="">Name:</label>
        <input type="text" formControlName="name">
@@ -12,7 +15,7 @@
        </div>
        <br>                
        <label for="">Phone:</label>
-       <input type="number" formControlName="phone">
+       <input type="text" formControlName="phone">
        <div *ngIf="userForm.get('phone')?.touched || userForm.get('phone')?.dirty">
         <p *ngIf="userForm.get('phone')?.errors?.['required']">Phone number is required</p>
         <p *ngIf="userForm.get('phone')?.errors?.['min']">Min 10 digits required</p>
@@ -23,8 +26,9 @@
        <input type="text" formControlName="city">
        <div *ngIf="userForm.get('city')?.touched || userForm.get('city')?.dirty">
         <p *ngIf="userForm.get('city')?.errors?.['required']">City name is required </p>
-
        </div>
+       <label for="">Fee</label>
+       <input type="text" formControlName="fee">
         <br>      
        <label for="">Image:</label>
        <input type="text" formControlName="image">  
@@ -32,7 +36,7 @@
         <p *ngIf="userForm.get('image')?.errors?.['required']">Image is required</p>
        </div>
        <br>
-       <button (click)="Submit()">Submit</button>
+       <button (click)="Submit()">{{id ? 'Update': 'Create'}}</button>
     </form>
 </div>
 
