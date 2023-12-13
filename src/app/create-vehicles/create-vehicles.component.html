@@ -1,6 +1,8 @@
 <div class="CreatingVehicleForm">
     <form [formGroup]="VehiclesForm">
-        <h1>Create Vehicle</h1>   
+
+        <h1 *ngIf="!id">Create Vehicle-Details</h1>
+        <h1 *ngIf="id">Update Vehicle-Details</h1>   
         <!-- Form Validators for input formcontrols -->
         <label for="">Vehicle:</label>
         <input type="text" formControlName="Vehicle">
@@ -44,7 +46,7 @@
             <p *ngIf="VehiclesForm.get('image')?.errors?.['required']">Upload the Vehicle image</p>
         </div>
         <br>
-        <button (click)="submit()" >Submit</button>
+        <button (click)="submit()" >{{id ? 'Update' : "create"}}</button>
 
     </form>
 </div>

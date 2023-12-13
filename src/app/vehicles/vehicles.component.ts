@@ -87,5 +87,7 @@ export class VehiclesComponent {
   view(id:number){
     this._router.navigateByUrl("/dashboard/vehicle-details/"+id);
   }
-
+  edit(id:number){
+    this._router.navigateByUrl("/dashboard/edit-vehicle-details/"+id);
+  }
 }

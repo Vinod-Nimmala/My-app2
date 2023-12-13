@@ -56,11 +56,18 @@ const routes: Routes = [
       {path:'create-account',canDeactivate:[NotifyGuard], component:CreateAccountComponent},
       {path:'user-form', canDeactivate:[NotifyGuard], component:UserFormComponent},
       {path:'student-form',canDeactivate:[NotifyGuard], component:StudentFormComponent},
+
+      //Creating child path for view the user-details and edit the user-details 
       {path:'user-details/:id', component:UserDetailsComponent},
       {path:'edit-user/:id',component:CreateUserComponent},
+
+      //Creating child path for view the account-details in separate path and edit the account-details
       {path:'account-details/:id',component:AccountDetailsComponent},
       {path:'edit-account/:id',component:CreateAccountComponent},
-      {path:'vehicle-details/:id',component:VehicleDetailsComponent}
+
+      //Creating child path for view the Vehicle-details in separate path and edit the vehicle-details
+      {path:'vehicle-details/:id',component:VehicleDetailsComponent},
+      {path:'edit-vehicle-details/:id', component:CreateVehiclesComponent}
   ]},
 
   //Empty routing path 

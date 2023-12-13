@@ -41,7 +41,13 @@ export class VehicleService {
   }
 
   //Post method to get the data from user an post/store it on  the API
-   createVehicles(data:any):Observable<any>{
+  createVehicles(data:any):Observable<any>{
     return this._httpClient.post(this.baseURL+"/",data);
-   }
+  }
+
+  //Put method call  to Update the data from the edited by user
+
+  editVehicle(id:any , data:any):Observable<any>{
+    return this._httpClient.put(this.baseURL+"/"+id,data);
+  }
 }
