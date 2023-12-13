@@ -29,6 +29,7 @@ import { StudentFormComponent } from './student-form/student-form.component';
 import { PricePipe } from './price.pipe';
 import { UserDetailsComponent } from './user-details/user-details.component';
 import { AccountDetailsComponent } from './account-details/account-details.component';
+import { VehicleDetailsComponent } from './vehicle-details/vehicle-details.component';
 
 @NgModule({
   declarations: [
@@ -57,7 +58,8 @@ import { AccountDetailsComponent } from './account-details/account-details.compo
     StudentFormComponent,
     PricePipe,
     UserDetailsComponent,
-    AccountDetailsComponent
+    AccountDetailsComponent,
+    VehicleDetailsComponent
   ],
   imports: [
     BrowserModule,

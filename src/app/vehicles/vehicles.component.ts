@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { VehicleService } from '../vehicle.service';
 import { NgIf } from '@angular/common';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-vehicles',
@@ -22,7 +23,7 @@ export class VehiclesComponent {
    //Creating variable for pagination 
    public pageno:number=0;
 
-  constructor(private _vehicleService:VehicleService){
+  constructor(private _vehicleService:VehicleService, private _router:Router){
     _vehicleService.getVehicles().subscribe(
       (data:any)=>{
         this.vehicles = data;
@@ -69,6 +70,8 @@ export class VehiclesComponent {
     }
     )
   }
+
+  //Method call for Pagination
   page(){
     this._vehicleService.getPagedUser(this.pageno).subscribe(
       (data:any)=>{
@@ -78,6 +81,11 @@ export class VehiclesComponent {
         alert("Internal server error");
       }
     )
+  }
+
+  //Method call for view button
+  view(id:number){
+    this._router.navigateByUrl("/dashboard/vehicle-details/"+id);
   }
 
 }

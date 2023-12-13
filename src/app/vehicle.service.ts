@@ -14,6 +14,12 @@ export class VehicleService {
   getVehicles():Observable<any>{
     return this._httpClient.get(this.baseURL);
   }
+
+  //Get Method to get the specified vehicle data from the API
+  getVehicle(id:number):Observable<any>{
+    return this._httpClient.get(this.baseURL+"/"+id);
+  } 
+  
   //Get method to filter  the data, which is received from the API
   getFilteredVehicles(term:string):Observable<any>{
     return this._httpClient.get(this.baseURL+"?filter="+term);
