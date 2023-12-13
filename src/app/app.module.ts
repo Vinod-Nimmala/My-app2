@@ -28,6 +28,7 @@ import { UserFormComponent } from './user-form/user-form.component';
 import { StudentFormComponent } from './student-form/student-form.component';
 import { PricePipe } from './price.pipe';
 import { UserDetailsComponent } from './user-details/user-details.component';
+import { AccountDetailsComponent } from './account-details/account-details.component';
 
 @NgModule({
   declarations: [
@@ -55,7 +56,8 @@ import { UserDetailsComponent } from './user-details/user-details.component';
     UserFormComponent,
     StudentFormComponent,
     PricePipe,
-    UserDetailsComponent
+    UserDetailsComponent,
+    AccountDetailsComponent
   ],
   imports: [
     BrowserModule,
