@@ -16,6 +16,11 @@ export class AccountService {
   getAccounts():Observable<any>{
     return this._httpClient.get(this.baseURL);
   }
+//Get method to get the specified account data from the  API
+  getAccount(id:number):Observable<any>{
+    return this._httpClient.get(this.baseURL+"/"+id)
+  }
+
   //Get method to get the filtered data
   getFilteredAccounts(term:string):Observable<any>{
     return this._httpClient.get(this.baseURL+"?filter="+term);
