@@ -59,6 +59,7 @@ const routes: Routes = [
       {path:'user-details/:id', component:UserDetailsComponent},
       {path:'edit-user/:id',component:CreateUserComponent},
       {path:'account-details/:id',component:AccountDetailsComponent},
+      {path:'edit-account/:id',component:CreateAccountComponent},
       {path:'vehicle-details/:id',component:VehicleDetailsComponent}
   ]},
 

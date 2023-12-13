@@ -23,7 +23,6 @@ export class CreateUserComponent {
 
    //Creating private variable in Constructor to access the userService
    constructor(private _userService:UserService, private _activatedRoute:ActivatedRoute){
-   
     _activatedRoute.params.subscribe(
 
       (data:any)=>{

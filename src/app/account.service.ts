@@ -47,4 +47,11 @@ export class AccountService {
   createAccounts(data:any):Observable<any>{
     return this._httpClient.post(this.baseURL+"/",data);
   }
+
+
+  //put method to collect the  Updated data
+  editAccount(id:any, data:any):Observable<any>{
+    return this._httpClient.put(this.baseURL+"/"+id,data);
+  }
+  
 }

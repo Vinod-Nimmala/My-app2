@@ -1,6 +1,9 @@
 <div class="creatingAccountform-Main">
     <form [formGroup]="Accountform">
-        <h1>Create Account</h1>
+        <!-- If condition to show the form names for create and Update -->
+        <h1 *ngIf="!id">Create Account</h1>
+        <h1 *ngIf="id">Update Account</h1>
+
         <label>AccountName:</label>
         <input type="text" formControlName="account_name">
         <div *ngIf="Accountform.get('account_name')?.touched || Accountform.get('account_name')?.dirty">
@@ -27,12 +30,12 @@
         </div>
         <br>
         <label>ProfilePicture:</label>
-        <input type="text" formControlName="profile_picture">
-        <div *ngIf="Accountform.get('profile_picture')?.touched || Accountform.get('profile_picture')?.dirty">
-            <p *ngIf="Accountform.get('profile_picture')?.errors?.['required']">ProfilePicture is required</p>
+        <input type="text" formControlName="profie_picture">
+        <div *ngIf="Accountform.get('profie_picture')?.touched || Accountform.get('profie_picture')?.dirty">
+            <p *ngIf="Accountform.get('profie_picture')?.errors?.['required']">ProfilePicture is required</p>
         </div>
         <br>
-        <button class="submit-button" (click)="submit()">Submit</button>
+        <button class="submit-button"  (click)="submit()">{{id ? 'Update':'create'}}</button>
     </form>
 </div>
 

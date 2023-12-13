@@ -83,4 +83,9 @@ export class AccountsComponent {
   view(id:number){
     this._router.navigateByUrl("/dashboard/account-details/"+id);
   }
+
+  //Method call for edit button click
+  edit(id:number){
+    this._router.navigateByUrl("/dashboard/edit-account/"+id);
+  }
 }
