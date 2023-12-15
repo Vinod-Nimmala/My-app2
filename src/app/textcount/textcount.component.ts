@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./textcount.component.scss']
 })
 export class TextcountComponent {
-
+  public text:any="";
 }
