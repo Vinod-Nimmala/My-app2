@@ -30,6 +30,8 @@ import { PricePipe } from './price.pipe';
 import { UserDetailsComponent } from './user-details/user-details.component';
 import { AccountDetailsComponent } from './account-details/account-details.component';
 import { VehicleDetailsComponent } from './vehicle-details/vehicle-details.component';
+import { ParentComponent } from './parent/parent.component';
+import { ChildComponent } from './child/child.component';
 
 @NgModule({
   declarations: [
@@ -59,7 +61,9 @@ import { VehicleDetailsComponent } from './vehicle-details/vehicle-details.compo
     PricePipe,
     UserDetailsComponent,
     AccountDetailsComponent,
-    VehicleDetailsComponent
+    VehicleDetailsComponent,
+    ParentComponent,
+    ChildComponent
   ],
   imports: [
     BrowserModule,

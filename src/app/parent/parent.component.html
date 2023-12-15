@@ -1,0 +1,7 @@
+<p>parent works!</p>
+<input type="text" [(ngModel)]="ap">
+
+<h2>BP:{{bp}}</h2>
+
+<!-- Importing parent value to child -->
+<app-child [ac]="ap" (bEvent)="catch($event)"></app-child>

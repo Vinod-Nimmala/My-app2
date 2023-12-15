@@ -28,6 +28,7 @@ import { NotifyGuard } from './notify.guard';
 import { UserDetailsComponent } from './user-details/user-details.component';
 import { AccountDetailsComponent } from './account-details/account-details.component';
 import { VehicleDetailsComponent } from './vehicle-details/vehicle-details.component';
+import { ParentComponent } from './parent/parent.component';
 
 const routes: Routes = [
   //General routing path
@@ -67,7 +68,10 @@ const routes: Routes = [
 
       //Creating child path for view the Vehicle-details in separate path and edit the vehicle-details
       {path:'vehicle-details/:id',component:VehicleDetailsComponent},
-      {path:'edit-vehicle-details/:id', component:CreateVehiclesComponent}
+      {path:'edit-vehicle-details/:id', component:CreateVehiclesComponent},
+
+      //Path for Component communication
+      {path:'parent',component:ParentComponent}, 
   ]},
 
   //Empty routing path 
