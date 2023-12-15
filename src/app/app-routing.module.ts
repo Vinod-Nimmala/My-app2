@@ -29,6 +29,9 @@ import { UserDetailsComponent } from './user-details/user-details.component';
 import { AccountDetailsComponent } from './account-details/account-details.component';
 import { VehicleDetailsComponent } from './vehicle-details/vehicle-details.component';
 import { ParentComponent } from './parent/parent.component';
+import { ItemsComponent } from './items/items.component';
+import { NavComponent } from './nav/nav.component';
+import { CartComponent } from './cart/cart.component';
 
 const routes: Routes = [
   //General routing path
@@ -72,6 +75,11 @@ const routes: Routes = [
 
       //Path for Component communication
       {path:'parent',component:ParentComponent}, 
+      
+      //Path for sibling communication
+      {path:'items', component:ItemsComponent},
+      {path:'nav', component:NavComponent},
+      {path:'cart',component:CartComponent}
   ]},
 
   //Empty routing path 
