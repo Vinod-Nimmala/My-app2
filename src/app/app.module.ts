@@ -35,6 +35,9 @@ import { ChildComponent } from './child/child.component';
 import { ItemsComponent } from './items/items.component';
 import { NavComponent } from './nav/nav.component';
 import { CartComponent } from './cart/cart.component';
+import { RatingComponent } from './rating/rating.component';
+import { RatingChildComponent } from './rating-child/rating-child.component';
+import { TextcountComponent } from './textcount/textcount.component';
 
 @NgModule({
   declarations: [
@@ -69,7 +72,10 @@ import { CartComponent } from './cart/cart.component';
     ChildComponent,
     ItemsComponent,
     NavComponent,
-    CartComponent
+    CartComponent,
+    RatingComponent,
+    RatingChildComponent,
+    TextcountComponent
   ],
   imports: [
     BrowserModule,

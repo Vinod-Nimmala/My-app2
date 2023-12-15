@@ -32,6 +32,7 @@ import { ParentComponent } from './parent/parent.component';
 import { ItemsComponent } from './items/items.component';
 import { NavComponent } from './nav/nav.component';
 import { CartComponent } from './cart/cart.component';
+import { RatingComponent } from './rating/rating.component';
 
 const routes: Routes = [
   //General routing path
@@ -79,7 +80,8 @@ const routes: Routes = [
       //Path for sibling communication
       {path:'items', component:ItemsComponent},
       {path:'nav', component:NavComponent},
-      {path:'cart',component:CartComponent}
+      {path:'cart',component:CartComponent},
+      {path:'rating',component:RatingComponent},
   ]},
 
   //Empty routing path 
