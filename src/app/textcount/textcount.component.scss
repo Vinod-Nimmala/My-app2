@@ -1,13 +1,13 @@
 .textarea{
     margin: 100px;
+    position: relative;
     
 }
-.text{
-    position: absolute;
-}
+// .text{
+    
+// }
 .child{
-position: relative;
-// position: sticky;
-left: 200px;
-top: 135px;
+position: absolute;
+bottom: 8px;
+right: 16px;
 }
