@@ -86,7 +86,11 @@ const routes: Routes = [
       {path:'rating',component:RatingComponent},
       
       {path:'textcount',component:TextcountComponent},
-      {path:'about-company',component:AboutCompanyComponent}
+      {path:'about-company',component:AboutCompanyComponent},
+
+      //Path for lazy loading communication 
+      {path: 'payments',
+      loadChildren: () => import('./payments/payments.module').then(m => m.PaymentsModule)}
   ]},
 
   //Empty routing path 
