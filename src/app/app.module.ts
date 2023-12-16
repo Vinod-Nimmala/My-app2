@@ -38,6 +38,7 @@ import { CartComponent } from './cart/cart.component';
 import { RatingComponent } from './rating/rating.component';
 import { RatingChildComponent } from './rating-child/rating-child.component';
 import { TextcountComponent } from './textcount/textcount.component';
+import { AboutModule } from './about/about.module';
 
 @NgModule({
   declarations: [
@@ -82,7 +83,8 @@ import { TextcountComponent } from './textcount/textcount.component';
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AboutModule
   ],
   providers: [],
   bootstrap: [AppComponent]

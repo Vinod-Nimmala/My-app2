@@ -34,6 +34,7 @@ import { NavComponent } from './nav/nav.component';
 import { CartComponent } from './cart/cart.component';
 import { RatingComponent } from './rating/rating.component';
 import { TextcountComponent } from './textcount/textcount.component';
+import { AboutCompanyComponent } from './about/about-company/about-company.component';
 
 const routes: Routes = [
   //General routing path
@@ -84,7 +85,8 @@ const routes: Routes = [
       {path:'cart',component:CartComponent},
       {path:'rating',component:RatingComponent},
       
-      {path:'textcount',component:TextcountComponent}
+      {path:'textcount',component:TextcountComponent},
+      {path:'about-company',component:AboutCompanyComponent}
   ]},
 
   //Empty routing path 
